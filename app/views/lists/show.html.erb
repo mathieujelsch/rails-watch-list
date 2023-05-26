@@ -1,0 +1,18 @@
+<h1>Liste de films de ta liste</h1>
+
+<div class="row">
+
+  <% @bookmarks.each do |bookmark|%>
+    <div class="col-4">
+      <div class="card-product">
+        <img src="<%= bookmark.movie.poster_url %>" />
+        <div class="card-product-infos">
+          <h2><%= bookmark.movie.title %></h2>
+          <p><%= bookmark.comment %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Ajoute un film a ta liste", new_list_bookmark_path(@list) %>

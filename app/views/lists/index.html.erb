@@ -1,0 +1,10 @@
+<h1>Index</h1>
+
+<h2>Voici les listes de genres</h2>
+<% @lists.each do |list|%>
+<%= link_to list_path(list) do %>
+<p><%= list.name %></p>
+<% end %>
+<% end %>
+
+<%= link_to "Ajoute une liste", new_list_path %>
